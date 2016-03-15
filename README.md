@@ -7,7 +7,7 @@ You can use the language of your choice to implement this solution. In the end, 
 
 ## Solution
 
-This program leverages vagrant to create coreos servers. This is meant simulate ssh calls on a remote machine. You specify the name of the vms in the coreos-servers file, user account names in the names file, and the uuids are randomly created from range 1000 to 2^31-2 which is the limit. I've implemented two version to this problem. 1) The first solution is speedy.py which will chunk all the request to add users in one request per server. 2) The second solution linear-deployer.py will make calls per user, however opening and closing ssh sessions adds a lot of delay. There is also a limit to how many arguments that can be passed in one line. This limit is set by the operating system. i.e getconf ARG_MAX. 
+I've implemented two version to this problem. 1) The first solution is speedy.py which will chunk all the request to add users in one request per server. 2) The second solution linear-deployer.py will make calls per user, however opening and closing ssh sessions adds a lot of delay. There is also a limit to how many arguments that can be passed in one line. This limit is set by the operating system. i.e getconf ARG_MAX. This program leverages vagrant to create coreos servers. This is meant simulate ssh calls on a remote machine. You specify the name of the vms in the coreos-servers file, user account names in the names file, and the uuids are randomly created from range 1000 to 2^31-2 which is the limit. 
 
 ## Requirements
 
